@@ -25,7 +25,14 @@ public class MainMenu : MonoBehaviour {
 		SceneManager.LoadScene("PlayScene");
 	}
 
-	public void quit() {
+    public void RollerRinkdRoom()
+    {
+        AudioManager.playAudio(clickSound);
+        GameManager.gameMode = GameManager.GameMode.RollerRinkRoom;
+        SceneManager.LoadScene("PlayScene");
+    }
+
+public void quit() {
 		Application.Quit();
 	}
 }
