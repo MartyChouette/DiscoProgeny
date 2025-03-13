@@ -48,6 +48,11 @@ public class GameManager : MonoBehaviour {
 	// Perhaps you could use this in your generation to make your rooms steadily increase in difficulty.
 	public static int levelNumber = 0;
 
+
+    public AudioClip song = Resources.Load<AudioClip>("blackout_church_2"); // Make sure the clip is in a folder named "Resources"
+    public AudioSource audioSource;
+
+
 	// These are protected properties that we only want to access via script (not via inspector)
 
 	[HideInInspector]
@@ -143,8 +148,20 @@ public class GameManager : MonoBehaviour {
 		// Otherwise, just detect our current room based on where the player is
 		else {
 			Player player = Player.instance;
+            //Instantiate(audioSource);
 
-			int playerRoomX = Mathf.FloorToInt(player.transform.position.x / (LevelGenerator.ROOM_WIDTH * Tile.TILE_SIZE));
+            // Get or add an AudioSource component to this GameObject
+            audioSource = GetComponent<AudioSource>();
+            if (audioSource == null)
+            {
+                audioSource = gameObject.AddComponent<AudioSource>();
+            }
+
+            // assign the clip and play it
+            audioSource.clip = song;
+            audioSource.Play();
+
+            int playerRoomX = Mathf.FloorToInt(player.transform.position.x / (LevelGenerator.ROOM_WIDTH * Tile.TILE_SIZE));
 			int playerRoomY = Mathf.FloorToInt(player.transform.position.y / (LevelGenerator.ROOM_HEIGHT * Tile.TILE_SIZE));
 			int numXRooms = roomGrid.GetLength(0);
 			int numYRooms = roomGrid.GetLength(1);
