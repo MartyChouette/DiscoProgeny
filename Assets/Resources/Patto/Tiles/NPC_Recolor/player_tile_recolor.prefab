@@ -228,9 +228,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbfd0963255c17b4eb9db6b7dc4eb9e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shirtColor: {r: 0, g: 0.9610865, b: 1, a: 1}
-  pantsColor: {r: 0.69538045, g: 1, b: 0, a: 1}
-  newSprite: {fileID: 0}
+  shirtColor: {r: 0.6603774, g: 0, b: 0.05753432, a: 1}
+  pantsColor: {r: 0.21238157, g: 0.40477654, b: 0.690566, a: 1}
 --- !u!1 &1901225560337196
 GameObject:
   m_ObjectHideFlags: 0
