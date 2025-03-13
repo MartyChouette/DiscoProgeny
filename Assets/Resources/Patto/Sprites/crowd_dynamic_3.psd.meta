@@ -137,7 +137,7 @@ TextureImporter:
     nameFileIdTable:
       crowd_dynamic_3_0: -1625845385490261825
   mipmapLimitGroupName: 
-  pSDRemoveMatte: 0
+  pSDRemoveMatte: 1
   userData: 
   assetBundleName: 
   assetBundleVariant: 

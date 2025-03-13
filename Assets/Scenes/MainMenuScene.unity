@@ -1116,9 +1116,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   allContributorIDs:
-  - Patto
   - Marty
-  - AP
+  - Alex
   - Ethan
   - Patto
 --- !u!4 &1420620112
