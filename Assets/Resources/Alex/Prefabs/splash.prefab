@@ -184,5 +184,6 @@ MonoBehaviour:
   heldAngle: 0
   tileWereHolding: {fileID: 0}
   aimDirection: {x: 0, y: 0}
+  bugs: {fileID: 1390380352294714, guid: 813377233ac6de54cb83c1f10b68e88f, type: 3}
   damageThreshold: 14
   onGroundThreshold: 1

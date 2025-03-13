@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class BugGun : Tile
 {
-
-	public GameObject bulletPrefab;
+    public GameObject bugs;
+    public GameObject bulletPrefab;
 
 	public GameObject muzzleFlashObj;
 

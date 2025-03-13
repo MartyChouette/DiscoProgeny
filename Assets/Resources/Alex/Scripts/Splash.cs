@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class Splash : Tile
 {
+    public GameObject bugs;
     public float damageThreshold = 14;
 
 	public float onGroundThreshold = 1f;
@@ -43,9 +44,14 @@ public class Splash : Tile
 			}
 			else {
 				otherTile.gameObject.GetComponent<SpriteRenderer>().color = purpleColor;
-			}
+                GameObject newBullet = Instantiate(bugs);
+                newBullet.transform.parent = transform.parent;
+                newBullet.transform.position = transform.position;
+                newBullet.transform.rotation = transform.rotation;
+                newBullet.GetComponent<Tile>().init();
+            }
 		}
-		die();
+        die();
 	}
 
 

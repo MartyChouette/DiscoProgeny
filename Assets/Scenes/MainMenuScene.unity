@@ -363,7 +363,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Roller Rink Mode
+  m_Text: Disco Mode
 --- !u!222 &289251280
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1118,8 +1118,6 @@ MonoBehaviour:
   allContributorIDs:
   - Marty
   - Alex
-  - Ethan
-  - Patto
 --- !u!4 &1420620112
 Transform:
   m_ObjectHideFlags: 0
