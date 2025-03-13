@@ -50,5 +50,6 @@ MonoBehaviour:
   - {fileID: 5361839570177592257, guid: b6f897eed84490a4f9515ff9a1208b7b, type: 3}
   - {fileID: 5361839570177592257, guid: 26f6bc9e86ae5b54a8c462f9606a94f5, type: 3}
   - {fileID: 5361839570177592257, guid: b6f897eed84490a4f9515ff9a1208b7b, type: 3}
+  - {fileID: 5361839570177592257, guid: b6f897eed84490a4f9515ff9a1208b7b, type: 3}
   roomGridX: 0
   roomGridY: 0

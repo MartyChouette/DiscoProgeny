@@ -204,3 +204,6 @@ MonoBehaviour:
   tileWereHolding: {fileID: 0}
   aimDirection: {x: 0, y: 0}
   danceType: 0
+  frame1: {fileID: 21300000, guid: e38227f7dd24f304485a9eb8750c6ece, type: 3}
+  frame2: {fileID: 21300000, guid: 914d0edb86cfdc14db81abed37caee51, type: 3}
+  bpm: 0
