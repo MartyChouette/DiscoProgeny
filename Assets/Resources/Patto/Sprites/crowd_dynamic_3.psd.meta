@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 81158e46b291b574e9e15f02ae9c9c6c
+guid: 42ee4f977bece9a448a3b19da4d6414e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8813275364738879984
-    second: crowd_3_0
+      213: -1625845385490261825
+    second: crowd_dynamic_3_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,7 +100,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: crowd_3_0
+      name: crowd_dynamic_3_0
       rect:
         serializedVersion: 2
         x: 0
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 01ea90120c4f0b580800000000000000
-      internalID: -8813275364738879984
+      spriteID: fb8152a6c36df69e0800000000000000
+      internalID: -1625845385490261825
       vertices: []
       indices: 
       edges: []
@@ -135,9 +135,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      crowd_3_0: -8813275364738879984
+      crowd_dynamic_3_0: -1625845385490261825
   mipmapLimitGroupName: 
-  pSDRemoveMatte: 1
+  pSDRemoveMatte: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 
