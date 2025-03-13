@@ -81,6 +81,27 @@ public class GenerateRollerRinkModeLevel : Room
         float leftRightBottomY = -totalVertical / 2f + roomSize / 2f;
         float leftRightTopY = totalVertical / 2f - roomSize / 2f;
 
+
+
+
+
+
+        //
+        //            spaces available generated around rink
+        //                  
+        //                      1           2
+        //                          | | | |
+        //                      //          \\
+        //                  //                  \\
+        //         7     //                          \\     3
+        //              |                             |  
+        //              |                             |
+        //         8    \\                          //      4
+        //                  \\  \\         //   // 
+        //                         | | | |
+        //
+        //                      5           6
+        //
         // define eight possible room positions with rotations so that bottom faces toward the rink
         var topLeft = (pos: new Vector3(topBottomLeftX, roomOffsetY, 0), rot: Quaternion.Euler(0, 0, 0));
         var topRight = (pos: new Vector3(topBottomRightX, roomOffsetY, 0), rot: Quaternion.Euler(0, 0, 0));
