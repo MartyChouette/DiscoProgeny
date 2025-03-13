@@ -54,7 +54,14 @@ MonoBehaviour:
   rinkHeight: 20
   rinkWidth: 30
   roomPrefabs: []
-  crowdPrefab: {fileID: 0}
+  staticCrowdPrefab: {fileID: 1249101369981090, guid: c10c635e948a1fd4ba1d8f3a6e5fa99d,
+    type: 3}
+  dynamicCrowdPrefab: {fileID: 1403095745553274, guid: e0d6a3e1f97f7421ba2b1904d29efd99,
+    type: 3}
   roomSize: 10
   extraSpacing: 2.5
   rinkOffset: {x: 45, y: 30}
+  gridCellSize: 2.88
+  gridWidth: 10
+  gridHeight: 10
+  maxCrowdCount: 20
