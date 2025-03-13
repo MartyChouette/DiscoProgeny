@@ -30,25 +30,25 @@ public class GenerateRollerRinkModeLevel : Room
     public Vector2 rinkOffset;
 
     [Header("crowd generation settings")]
-    // grid settings for dynamic crowd placement
+    // grid settings for bounding the dynamic crowd placement
     public float gridCellSize = 1f;
     public int gridWidth = 50;
     public int gridHeight = 50;
 
-    // number of dynamic crowds to place
-    public int maxCrowdCount = 20;
+    // number of dynamic groups to place
+    public int maxGroupCount = 20;
 
     // list of areas to leave clear for rink rooms static crowds etc
     private List<Rect> noSpawnZones = new List<Rect>();
-
     // level offset used for centering
     private Vector3 levelOffset;
-
     // container for all level objects
     private GameObject layoutContainer;
-
     // ensure level is only generated once
     private bool layoutGenerated = false;
+
+    private List<GameObject> dynamicCrowds = new List<GameObject>();
+
 
     public override void fillRoom(LevelGenerator ourGenerator, ExitConstraint requiredExits)
     {
@@ -116,12 +116,10 @@ public class GenerateRollerRinkModeLevel : Room
             noSpawnZones.Add(new Rect(pos.x - roomSize / 2, pos.y - roomSize / 2, roomSize, roomSize));
         }
 
-        // if extra slot exists place static crowd group (crowds are not rotated)
+        // if extra slot exists, place a group of 2-3 static crowds (crowds are not rotated)
         if (roomPrefabs.Length < availablePositions.Count && staticCrowdPrefab != null)
         {
             Vector3 pos = availablePositions[roomPrefabs.Length].Item1 + levelOffset;
-
-            // place a group of 2 or 3 static crowds
             int groupSize = Random.Range(2, 4);
             for (int i = 0; i < groupSize; i++)
             {
@@ -131,45 +129,61 @@ public class GenerateRollerRinkModeLevel : Room
             noSpawnZones.Add(new Rect(pos.x - roomSize / 2, pos.y - roomSize / 2, roomSize, roomSize));
         }
 
-        // place dynamic crowds in random unoccupied cells (crowds are not rotated)
+        // place dynamic crowds randomly and start drifting them
         PlaceDynamicCrowds();
+        StartCoroutine(CrowdDrift());
     }
 
-    // place dynamic crowds in random unoccupied cells with identity rotation
+    // place dynamic crowds using random distribution within a bounding box
     private void PlaceDynamicCrowds()
     {
-        Vector3 gridOrigin = levelOffset - new Vector3(gridWidth * gridCellSize / 2f, gridHeight * gridCellSize / 2f, 0);
-        List<Vector3> validCells = new List<Vector3>();
-        for (int i = 0; i < gridWidth; i++)
+        Vector3 minBounds = levelOffset - new Vector3(gridWidth * gridCellSize / 2f, gridHeight * gridCellSize / 2f, 0);
+        Vector3 maxBounds = levelOffset + new Vector3(gridWidth * gridCellSize / 2f, gridHeight * gridCellSize / 2f, 0);
+        int maxAttempts = 10;
+
+        for (int i = 0; i < maxGroupCount; i++)
         {
-            for (int j = 0; j < gridHeight; j++)
+            int attempts = 0;
+            bool placed = false;
+            while (attempts < maxAttempts && !placed)
             {
-                Vector3 cellCenter = gridOrigin + new Vector3((i + 0.5f) * gridCellSize, (j + 0.5f) * gridCellSize, 0);
-                bool occupied = false;
+                attempts++;
+                float randX = Random.Range(minBounds.x, maxBounds.x);
+                float randY = Random.Range(minBounds.y, maxBounds.y);
+                Vector3 pos = new Vector3(randX, randY, levelOffset.z);
+                bool valid = true;
                 foreach (Rect rect in noSpawnZones)
                 {
-                    if (rect.Contains(new Vector2(cellCenter.x, cellCenter.y)))
+                    if (rect.Contains(new Vector2(pos.x, pos.y)))
                     {
-                        occupied = true;
+                        valid = false;
                         break;
                     }
                 }
-                if (!occupied)
-                    validCells.Add(cellCenter);
+                if (valid)
+                {
+                    GameObject crowd = Instantiate(dynamicCrowdPrefab, pos, Quaternion.identity, layoutContainer.transform);
+                    dynamicCrowds.Add(crowd);
+                    placed = true;
+                }
             }
         }
-        // shuffle valid cells
-        for (int i = validCells.Count - 1; i > 0; i--)
+    }
+
+    // coroutine to drift dynamic crowds slowly
+    private IEnumerator CrowdDrift()
+    {
+        while (true)
         {
-            int j = Random.Range(0, i + 1);
-            Vector3 temp = validCells[i];
-            validCells[i] = validCells[j];
-            validCells[j] = temp;
-        }
-        int count = Mathf.Min(maxCrowdCount, validCells.Count);
-        for (int k = 0; k < count; k++)
-        {
-            Instantiate(dynamicCrowdPrefab, validCells[k], Quaternion.identity, layoutContainer.transform);
+            yield return new WaitForSeconds(0.2f);
+            foreach (GameObject crowd in dynamicCrowds)
+            {
+                if (crowd != null)
+                {
+                    Vector3 offset = new Vector3(Random.Range(-0.05f, 0.05f), Random.Range(-0.05f, 0.05f), 0);
+                    crowd.transform.position += offset;
+                }
+            }
         }
     }
 }
