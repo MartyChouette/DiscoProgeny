@@ -1,0 +1,136 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\GitHub\\DiscoProgeny\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{29EFB09D-2139-61B1-919D-0EDE673C3B46}|Assembly-CSharp.csproj|d:\\github\\discoprogeny\\assets\\resources\\ap\\scripts\\apt283basicenemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{29EFB09D-2139-61B1-919D-0EDE673C3B46}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\ap\\scripts\\apt283basicenemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{29EFB09D-2139-61B1-919D-0EDE673C3B46}|Assembly-CSharp.csproj|d:\\github\\discoprogeny\\assets\\resources\\marty\\generaterollerrinkmodelevel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{29EFB09D-2139-61B1-919D-0EDE673C3B46}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\marty\\generaterollerrinkmodelevel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{29EFB09D-2139-61B1-919D-0EDE673C3B46}|Assembly-CSharp.csproj|d:\\github\\discoprogeny\\assets\\resources\\marty\\diggerroom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{29EFB09D-2139-61B1-919D-0EDE673C3B46}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\marty\\diggerroom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{29EFB09D-2139-61B1-919D-0EDE673C3B46}|Assembly-CSharp.csproj|d:\\github\\discoprogeny\\assets\\scripts\\gameobjects\\tile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{29EFB09D-2139-61B1-919D-0EDE673C3B46}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gameobjects\\tile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{29EFB09D-2139-61B1-919D-0EDE673C3B46}|Assembly-CSharp.csproj|D:\\GitHub\\DiscoProgeny\\assets\\scripts\\gamestates\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{29EFB09D-2139-61B1-919D-0EDE673C3B46}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gamestates\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{29EFB09D-2139-61B1-919D-0EDE673C3B46}|Assembly-CSharp.csproj|D:\\GitHub\\DiscoProgeny\\assets\\scripts\\gamestates\\mainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{29EFB09D-2139-61B1-919D-0EDE673C3B46}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gamestates\\mainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{29EFB09D-2139-61B1-919D-0EDE673C3B46}|Assembly-CSharp.csproj|D:\\GitHub\\DiscoProgeny\\assets\\scripts\\util\\levelgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{29EFB09D-2139-61B1-919D-0EDE673C3B46}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\util\\levelgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "apt283BasicEnemy.cs",
+              "DocumentMoniker": "D:\\GitHub\\DiscoProgeny\\Assets\\Resources\\AP\\Scripts\\apt283BasicEnemy.cs",
+              "RelativeDocumentMoniker": "Assets\\Resources\\AP\\Scripts\\apt283BasicEnemy.cs",
+              "ToolTip": "D:\\GitHub\\DiscoProgeny\\Assets\\Resources\\AP\\Scripts\\apt283BasicEnemy.cs",
+              "RelativeToolTip": "Assets\\Resources\\AP\\Scripts\\apt283BasicEnemy.cs",
+              "ViewState": "AgIAACoAAAAAAAAAAAAwwEIAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-12T22:30:19.803Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DiggerRoom.cs",
+              "DocumentMoniker": "D:\\GitHub\\DiscoProgeny\\Assets\\Resources\\Marty\\DiggerRoom.cs",
+              "RelativeDocumentMoniker": "Assets\\Resources\\Marty\\DiggerRoom.cs",
+              "ToolTip": "D:\\GitHub\\DiscoProgeny\\Assets\\Resources\\Marty\\DiggerRoom.cs",
+              "RelativeToolTip": "Assets\\Resources\\Marty\\DiggerRoom.cs",
+              "ViewState": "AgIAAN4AAAAAAAAAAAAqwPUAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-12T22:06:28.967Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "GenerateRollerRinkModeLevel.cs",
+              "DocumentMoniker": "D:\\GitHub\\DiscoProgeny\\Assets\\Resources\\Marty\\GenerateRollerRinkModeLevel.cs",
+              "RelativeDocumentMoniker": "Assets\\Resources\\Marty\\GenerateRollerRinkModeLevel.cs",
+              "ToolTip": "D:\\GitHub\\DiscoProgeny\\Assets\\Resources\\Marty\\GenerateRollerRinkModeLevel.cs",
+              "RelativeToolTip": "Assets\\Resources\\Marty\\GenerateRollerRinkModeLevel.cs",
+              "ViewState": "AgIAAEkAAAAAAAAAAAAuwHkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-12T22:01:14.138Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Tile.cs",
+              "DocumentMoniker": "D:\\GitHub\\DiscoProgeny\\Assets\\Scripts\\GameObjects\\Tile.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\GameObjects\\Tile.cs",
+              "ToolTip": "D:\\GitHub\\DiscoProgeny\\Assets\\Scripts\\GameObjects\\Tile.cs",
+              "RelativeToolTip": "Assets\\Scripts\\GameObjects\\Tile.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-12T21:58:56.574Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "LevelGenerator.cs",
+              "DocumentMoniker": "D:\\GitHub\\DiscoProgeny\\Assets\\Scripts\\Util\\LevelGenerator.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Util\\LevelGenerator.cs",
+              "ToolTip": "D:\\GitHub\\DiscoProgeny\\Assets\\Scripts\\Util\\LevelGenerator.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Util\\LevelGenerator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-11T20:51:48.506Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "GameManager.cs",
+              "DocumentMoniker": "D:\\GitHub\\DiscoProgeny\\Assets\\Scripts\\GameStates\\GameManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\GameStates\\GameManager.cs",
+              "ToolTip": "D:\\GitHub\\DiscoProgeny\\Assets\\Scripts\\GameStates\\GameManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\GameStates\\GameManager.cs",
+              "ViewState": "AgIAAGsAAAAAAAAAAAAswA0AAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-11T20:45:45.136Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "MainMenu.cs",
+              "DocumentMoniker": "D:\\GitHub\\DiscoProgeny\\Assets\\Scripts\\GameStates\\MainMenu.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\GameStates\\MainMenu.cs",
+              "ToolTip": "D:\\GitHub\\DiscoProgeny\\Assets\\Scripts\\GameStates\\MainMenu.cs",
+              "RelativeToolTip": "Assets\\Scripts\\GameStates\\MainMenu.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-11T20:45:03.929Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

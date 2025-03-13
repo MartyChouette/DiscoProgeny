@@ -10,9 +10,10 @@ public class GameManager : MonoBehaviour {
 	public enum GameMode {
 		SingleRoom,
 		CombinedRooms,
-		Chaos
+		Chaos,
+		RollerRinkRoom
 	}
-	public static GameMode gameMode = GameMode.CombinedRooms;
+	public static GameMode gameMode = GameMode.RollerRinkRoom;
 
 
 	// END TYPES
@@ -124,12 +125,27 @@ public class GameManager : MonoBehaviour {
 				unscaledInvoke("finishRoomTransition", 0.5f);
 			}
 		}
+
+		else if (gameMode == GameMode.RollerRinkRoom)
+        {
+            Player player = Player.instance;
+            int playerRoomX = Mathf.FloorToInt(player.transform.position.x / (LevelGenerator.ROOM_WIDTH * Tile.TILE_SIZE));
+            int playerRoomY = Mathf.FloorToInt(player.transform.position.y / (LevelGenerator.ROOM_HEIGHT * Tile.TILE_SIZE));
+            int numXRooms = roomGrid.GetLength(0);
+            int numYRooms = roomGrid.GetLength(1);
+            if (playerRoomX >= 0 && playerRoomX < numXRooms && playerRoomY >= 0 && playerRoomY < numYRooms)
+            {
+                currentRoom = roomGrid[playerRoomX, playerRoomY];
+                Player.instance.transform.parent = currentRoom.transform;
+            }
+
+        }
 		// Otherwise, just detect our current room based on where the player is
 		else {
 			Player player = Player.instance;
 
-			int playerRoomX = Mathf.FloorToInt(player.transform.position.x / (LevelGenerator.ROOM_WIDTH*Tile.TILE_SIZE));
-			int playerRoomY = Mathf.FloorToInt(player.transform.position.y / (LevelGenerator.ROOM_HEIGHT*Tile.TILE_SIZE));
+			int playerRoomX = Mathf.FloorToInt(player.transform.position.x / (LevelGenerator.ROOM_WIDTH * Tile.TILE_SIZE));
+			int playerRoomY = Mathf.FloorToInt(player.transform.position.y / (LevelGenerator.ROOM_HEIGHT * Tile.TILE_SIZE));
 			int numXRooms = roomGrid.GetLength(0);
 			int numYRooms = roomGrid.GetLength(1);
 			if (playerRoomX >= 0 && playerRoomX < numXRooms && playerRoomY >= 0 && playerRoomY < numYRooms) {

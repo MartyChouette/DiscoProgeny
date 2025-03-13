@@ -21,7 +21,7 @@ public class Player : Tile {
 
 
 	protected int _walkDirection = 2;
-
+	
 	// Used to ensure we don't drop an item and then pick up the exact same item.
 	protected Tile _lastTileWeHeld = null;
 
