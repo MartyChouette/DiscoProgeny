@@ -135,6 +135,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: wall_tile
       objectReference: {fileID: 0}
+    - target: {fileID: 1249101369981090, guid: ad909242602e14ab893ee3381803cc01, type: 3}
+      propertyPath: m_TagString
+      value: Bar
+      objectReference: {fileID: 0}
     - target: {fileID: 4113051429650106, guid: ad909242602e14ab893ee3381803cc01, type: 3}
       propertyPath: m_LocalScale.x
       value: 5

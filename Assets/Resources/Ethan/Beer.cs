@@ -6,13 +6,17 @@ using UnityEngine;
 // A simple rock that can be thrown by the player and enemies alike
 public class Beer : Tile
 {
+	public CameraFollow swayingMotionScript;
+	public float detectionRadius = 5f;
 	public Sprite emptyBeer;
+	public Sprite fullBeer;
 	// Sound that's played when we're thrown.
 	public AudioClip throwSound;
+	public AudioClip fillSound;
 	public AudioClip drinkSound;
 	// How much force to add when thrown
 	public float throwForce = 3000f;
-
+	public int alchLevel = 1;
 	// How slow we need to be going before we consider ourself "on the ground" again
 	public float onGroundThreshold = 0.8f;
 
@@ -86,8 +90,17 @@ public class Beer : Tile
 
 			_afterThrowCounter = afterThrowTime;
         }
+		else if (nearBar())
+        {
+			AudioManager.playAudio(drinkSound);
+			SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
+			spriteRenderer.sprite = fullBeer;
+			drank = false;
+		}
         else
         {
+            swayingMotionScript = FindObjectOfType<CameraFollow>();
+			swayingMotionScript.swayAmount += alchLevel; 
 			AudioManager.playAudio(drinkSound);
 			//intoxication goes up
 			SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
@@ -156,6 +169,19 @@ public class Beer : Tile
 
 	}
 
+	public bool nearBar()
+    {
+		Collider2D[] hitColliders = Physics2D.OverlapCircleAll(_sprite.transform.localPosition, detectionRadius);
 
-
+		foreach (var hitCollider in hitColliders)
+		{
+			if (hitCollider.CompareTag("Bar"))
+			{
+				return true; 
+			}
+		}
+		return false;
+	}
 }
+
+
