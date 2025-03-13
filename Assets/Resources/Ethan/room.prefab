@@ -49,5 +49,6 @@ MonoBehaviour:
   localTilePrefabs:
   - {fileID: 1390380352294714, guid: 813377233ac6de54cb83c1f10b68e88f, type: 3}
   - {fileID: 1376035031062694, guid: 516219ba586a6aa4cb48940e1d9f38ee, type: 3}
+  - {fileID: 1713092328889116630, guid: ee9f5be94eb98da478e2f0e42218ef96, type: 3}
   roomGridX: 0
   roomGridY: 0

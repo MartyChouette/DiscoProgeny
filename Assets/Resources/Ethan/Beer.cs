@@ -46,6 +46,7 @@ public class Beer : Tile
 	// The idea is that we get thrown when we're used
 	public override void useAsItem(Tile tileUsingUs)
 	{
+
 		if (_tileHoldingUs != tileUsingUs)
 		{
 			return;
@@ -54,7 +55,25 @@ public class Beer : Tile
 		{
 			return; // Don't allow us to be thrown while we're on a transition area.
 		}
-		if (drank)
+
+		if (!drank)
+		{
+			swayingMotionScript = FindObjectOfType<CameraFollow>();
+			swayingMotionScript.swayAmount += alchLevel;
+			AudioManager.playAudio(drinkSound);
+			//intoxication goes up
+			SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
+			spriteRenderer.sprite = emptyBeer;
+			drank = true;
+		}
+		else if (nearBar())
+		{
+			AudioManager.playAudio(drinkSound);
+			SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
+			spriteRenderer.sprite = fullBeer;
+			drank = false;
+		}
+		else
 		{
 
 			AudioManager.playAudio(throwSound);
@@ -90,23 +109,7 @@ public class Beer : Tile
 
 			_afterThrowCounter = afterThrowTime;
         }
-		else if (nearBar())
-        {
-			AudioManager.playAudio(drinkSound);
-			SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
-			spriteRenderer.sprite = fullBeer;
-			drank = false;
-		}
-        else
-        {
-            swayingMotionScript = FindObjectOfType<CameraFollow>();
-			swayingMotionScript.swayAmount += alchLevel; 
-			AudioManager.playAudio(drinkSound);
-			//intoxication goes up
-			SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
-			spriteRenderer.sprite = emptyBeer;
-			drank = true;
-		}
+
 	}
 
 	protected virtual void Update()
@@ -172,8 +175,8 @@ public class Beer : Tile
 	public bool nearBar()
     {
 		Debug.Log("We Here");
-		Collider2D[] hitColliders = Physics2D.OverlapCircleAll(_sprite.transform.localPosition, detectionRadius);
-
+		Collider2D[] hitColliders = Physics2D.OverlapCircleAll(_sprite.transform.position, detectionRadius);
+		//Debug.Log(_sprite.transform.localPosition + "");
 		foreach (var hitCollider in hitColliders)
 		{
 			if (hitCollider.CompareTag("Bar"))
@@ -181,6 +184,7 @@ public class Beer : Tile
 				return true; 
 			}
 		}
+		Debug.Log("Barless");
 		return false;
 	}
 }
