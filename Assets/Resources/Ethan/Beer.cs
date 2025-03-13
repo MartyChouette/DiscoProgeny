@@ -16,7 +16,7 @@ public class Beer : Tile
 	public AudioClip drinkSound;
 	// How much force to add when thrown
 	public float throwForce = 3000f;
-	public int alchLevel = 1;
+	public float alchLevel = 1f;
 	// How slow we need to be going before we consider ourself "on the ground" again
 	public float onGroundThreshold = 0.8f;
 
@@ -142,7 +142,7 @@ public class Beer : Tile
 		}
 		else
 		{
-			_sprite.transform.localPosition = Vector3.zero;
+			//_sprite.transform.localPosition = Vector3.zero;
 		}
 
 
@@ -171,6 +171,7 @@ public class Beer : Tile
 
 	public bool nearBar()
     {
+		Debug.Log("We Here");
 		Collider2D[] hitColliders = Physics2D.OverlapCircleAll(_sprite.transform.localPosition, detectionRadius);
 
 		foreach (var hitCollider in hitColliders)

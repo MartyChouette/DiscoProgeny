@@ -52,6 +52,7 @@ public class VendingMachine : BasicAICreature
 		// If we can, then FIRE
 		GameObject rDrink = Drinks[Random.Range(0, Drinks.Length)];
 		GameObject arrowObj = Instantiate(rDrink);
+		Debug.Log("spawned");
 		arrowObj.transform.parent = transform.parent;
 		Physics2D.IgnoreCollision(_collider, arrowObj.GetComponent<Collider2D>());
 		arrowObj.transform.position = transform.position + (Vector3)arrowSpawnOffset;
@@ -64,7 +65,7 @@ public class VendingMachine : BasicAICreature
 		AudioManager.playAudio(shootSound);
 		_loaded = false;
 		//_sprite.sprite = unloadedSprite;
-		Destroy(tileDetectorObj);
+		//Destroy(tileDetectorObj);
 	}
 
 	void OnEnable()

@@ -211,15 +211,14 @@ MonoBehaviour:
   tagsWeChase: 32
   Drinks:
   - {fileID: 1387771116485768, guid: cd8e58a60e804a8409ee9c6d361ebcc4, type: 3}
-  - {fileID: 1387771116485768, guid: cd8e58a60e804a8409ee9c6d361ebcc4, type: 3}
+  - {fileID: 1387771116485768, guid: 1d8f64db7cb577d4caf4eae7afa002b2, type: 3}
   arrowPrefab: {fileID: 1387771116485768, guid: cd8e58a60e804a8409ee9c6d361ebcc4,
     type: 3}
-  arrowSpawnOffset: {x: 0, y: 0}
+  arrowSpawnOffset: {x: -1, y: 0}
   fireDirection: {x: 1, y: 0}
   shootSound: {fileID: 8300000, guid: 0b8c37d3046f8134b99e6eeca15e50e8, type: 3}
-  unloadedSprite: {fileID: 0}
-  tileDetectorObj: {fileID: 1387771116485768, guid: cd8e58a60e804a8409ee9c6d361ebcc4,
-    type: 3}
+  unloadedSprite: {fileID: 21300000, guid: f97f77c3d0c9a694dbb44681484a24bb, type: 3}
+  tileDetectorObj: {fileID: 1252938177822876}
   shootForce: 100
 --- !u!61 &61807986568337184
 BoxCollider2D:

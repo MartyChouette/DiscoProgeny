@@ -6,7 +6,7 @@ public class CameraFollow : MonoBehaviour {
 
 	public float cameraFollowSpeed = 10f;
 	public float swaySpeed = 2f;
-	public int swayAmount = 0;
+	public float swayAmount = 0;
 	void Start() {
 		Vector2 newCameraPos = transform.position;
 		// If we're in single room mode, we behave differently than in the other modes.
@@ -73,8 +73,9 @@ public class CameraFollow : MonoBehaviour {
 			newCameraPos = new Vector2(Mathf.Clamp(newCameraPos.x, minCameraX, maxCameraX), Mathf.Clamp(newCameraPos.y, minCameraY, maxCameraY));
 		}
 
+		float sway = Mathf.Sin(Time.time * swaySpeed) * swayAmount;
 		// Make sure our z-coordinate is left unchanged.
-		transform.position = new Vector3(newCameraPos.x, newCameraPos.y, transform.position.z);
+		transform.position = new Vector3(newCameraPos.x + sway, newCameraPos.y, transform.position.z);
 	}
 
 

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1407081532642732476}
   m_Layer: 0
   m_Name: Bar
-  m_TagString: Untagged
+  m_TagString: Bar
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -66,6 +66,10 @@ PrefabInstance:
     - target: {fileID: 1781302445510578, guid: cfd6546f3904642f1bbaddf9fe7ced93, type: 3}
       propertyPath: m_Name
       value: pig
+      objectReference: {fileID: 0}
+    - target: {fileID: 1781302445510578, guid: cfd6546f3904642f1bbaddf9fe7ced93, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4383413618745740, guid: cfd6546f3904642f1bbaddf9fe7ced93, type: 3}
       propertyPath: m_LocalPosition.x
