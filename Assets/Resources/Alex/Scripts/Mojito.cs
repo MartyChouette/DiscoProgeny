@@ -34,8 +34,10 @@ public class Mojito : Tile
 		}
 
 		if (_tileHoldingUs != null) {
-			// If we're held, rotate and aim the drink.
-			aim();
+			// We aim the rock behind us.
+			_sprite.transform.localPosition = new Vector3(-0.5f, 0, 0);
+			float aimAngle = Mathf.Atan2(_tileHoldingUs.aimDirection.y, _tileHoldingUs.aimDirection.x) * Mathf.Rad2Deg;
+			transform.localRotation = Quaternion.Euler(0, 0, aimAngle);
 		}
 		else {
 			// Otherwise, move the drink back to the normal position. 
