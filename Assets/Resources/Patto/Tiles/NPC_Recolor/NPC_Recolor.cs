@@ -7,6 +7,7 @@ using UnityEngine.UIElements;
 
 public class NPC_Recolor : MonoBehaviour
 {
+    public bool randomizeColors;
     public Color shirtColor;
     public Color pantsColor;
 
@@ -25,6 +26,13 @@ public class NPC_Recolor : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+
+        if (randomizeColors)
+        {
+            shirtColor = new Color(Random.Range(0f, 1f), Random.Range(0f, 1f), Random.Range(0f, 1f), 1);
+            pantsColor = new Color(Random.Range(0f, 1f), Random.Range(0f, 1f), Random.Range(0f, 1f), 1);
+        }
+
         spriteRend = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
 

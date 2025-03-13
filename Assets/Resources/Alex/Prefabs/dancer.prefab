@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6291073045426303513}
   - component: {fileID: 4584871638244374215}
   - component: {fileID: 6278643067688811898}
+  - component: {fileID: 8634142406468920322}
   m_Layer: 0
   m_Name: sprite
   m_TagString: Untagged
@@ -78,7 +79,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 245c597169dfb421d9dc8776f511cbfe, type: 3}
-  m_Color: {r: 1, g: 0.944881, b: 0.103773475, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -110,6 +111,21 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &8634142406468920322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 76195155004892379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbfd0963255c17b4eb9db6b7dc4eb9e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  randomizeColors: 1
+  shirtColor: {r: 0.2905661, g: 0.28453547, b: 0.28453547, a: 1}
+  pantsColor: {r: 0.82963395, g: 0, b: 0.9547169, a: 1}
 --- !u!1 &817784485140202493
 GameObject:
   m_ObjectHideFlags: 0
@@ -122,7 +138,6 @@ GameObject:
   - component: {fileID: 1946257761911514246}
   - component: {fileID: 2118033545086514501}
   - component: {fileID: 334904682876675552}
-  - component: {fileID: 5287620771910387946}
   m_Layer: 0
   m_Name: dancer
   m_TagString: Untagged
@@ -249,17 +264,3 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1.6292257}
   m_EdgeRadius: 0
---- !u!114 &5287620771910387946
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 817784485140202493}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fbfd0963255c17b4eb9db6b7dc4eb9e8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shirtColor: {r: 0.5882353, g: 0, b: 0, a: 0}
-  pantsColor: {r: 0.14820933, g: 0.059748232, b: 1, a: 0}
